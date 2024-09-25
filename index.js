@@ -22,7 +22,6 @@ dir.forEach((d)=>{
 
 public.forEach((p)=>{
     const route = ("/"+p).replace(/\s/g,"-")
-    console.log(route)
     app.get(route,(req, res)=>{
         return res.sendFile(`${__dirname}/public/${p}`)
     })   
